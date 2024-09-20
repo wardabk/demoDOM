@@ -1,0 +1,150 @@
+html body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(227, 234, 238);
+  color: black;
+}
+nav {
+  font-size: 20px;
+  font-weight: bold;
+  background-color: rgb(33, 36, 56);
+}
+/********** element dom **********/
+body h3 {
+  font-weight: bold;
+}
+/**********************/
+#domMethods {
+  line-height: 40px;
+}
+/**********************/
+#demoFooter {
+  text-align: center;
+  color: white;
+  padding: 20px;
+  background-color: rgb(33, 36, 56);
+}
+/*******************/
+.todoList input {
+  border-radius: 5px;
+  margin: 5px;
+  padding: 10px;
+  display: block;
+}
+
+#infoList {
+  margin-top: 20px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.edit {
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: rgb(26, 145, 224);
+}
+
+.edit:hover {
+  background-color: blue;
+}
+
+.delete {
+  color: white;
+  cursor: pointer;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: rgb(216, 79, 79);
+}
+.delete:hover {
+  background-color: red;
+}
+
+#domElements input,
+#domForms input,
+#domEvents input,
+#domCollections input {
+  border-radius: 5px;
+  margin: 5px;
+  padding: 10px;
+  display: block;
+}
+
+#domElements .output {
+  margin-top: 20px;
+}
+
+/*********************************/
+#box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  margin: 10px;
+  position: relative;
+}
+
+#domEvents .boxEvent {
+  width: 150px;
+  height: 150px;
+  background-color: rgb(45, 142, 36);
+  color: white;
+  font-weight: 600;
+  margin: 10px;
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+/*******/
+#domMethods,
+#domDocument,
+#domElements,
+#domHtml,
+#domForms,
+#domCss,
+#domAnimation,
+#domEvents,
+#domEventListener,
+#domNavigation,
+#domNodes,
+#domCollections,
+#domNodeLists {
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f1f1f1;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition: all 0.5s ease;
+}
+#domMethods:hover,
+#domDocument:hover,
+#domElements:hover,
+#domHtml:hover,
+#domForms:hover,
+#domCss:hover,
+#domAnimation:hover,
+#domEvents:hover,
+#domEventListener:hover,
+#domNavigation:hover,
+#domNodes:hover,
+#domCollections:hover,
+#domNodeLists:hover {
+  transform: translateY(-10px) scale(1.02);
+}

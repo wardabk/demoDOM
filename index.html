@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo DOM JS</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  </head>
+  <body>
+   <!-- <header id="demoHeader">
+    <h1>TP Démos DOM JS</h1>
+   </header> -->
+   <section id="menu">
+    <nav class="navbar navbar-expand-lg navbar-dark py-3">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Warda Bk</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#home">Accueil</a>
+                  </li>
+                 <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Démos
+                </a>
+                <ul class="dropdown-menu">
+                    <li class="domDocument nav-item">
+                        <a class="dropdown-item" href="#domMethods">DOM Methods</a>
+                    </li>   
+                    <li class="domDocument nav-item">
+                        <a class="dropdown-item" href="#domDocument">DOM Documents</a>
+                    </li>
+                    <li class="domElements">
+                        <a class="dropdown-item" href="#domElements">DOM Elements</a>
+                    </li>
+                    <li class="domHtml">
+                        <a class="dropdown-item" href="#domHtml">DOM HTML</a>
+                    </li>
+                    <li class="domForms">
+                        <a class="dropdown-item" href="#domForms">DOM Forms</a>
+                    </li>
+                    <li class="domCss">
+                        <a class="dropdown-item" href="#domCss">DOM CSS</a>
+                    </li>
+                    <li class="domAnimation">
+                        <a class="dropdown-item" href="#domAnimation">DOM Animation</a>
+                    </li>
+                    <li class="domEvents">
+                        <a class="dropdown-item" href="#domEvents">DOM Events</a>
+                    </li>
+                    <li class="domEventListener">
+                        <a class="dropdown-item" href="#domEventListener">DOM EventListener</a>
+                    </li>
+                    <li class="domNavigation">
+                        <a class="dropdown-item" href="#domNavigation">DOM Navigations</a>
+                        </li>
+                    <li class="domNodes">
+                        <a class="dropdown-item" href="#domNodes">DOM Nodes</a>
+                    </li>
+                    <li class="domCollections">
+                        <a class="dropdown-item" href="#domCollections">DOM Collections</a>
+                    </li>
+                    <li class="domLists">
+                        <a class="dropdown-item" href="#domNodeLists">DOM Node Lists </a>
+                    </li>
+                    </ul>
+              </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </section>
+      <!---------------------------------------->
+           
+            <section class="container-fluid py-3"  id="domMethods">
+                <div class="container">
+                    <h3>DOM Methods</h3>
+                    <p>Le DOM HTML est un modèle d’objet et une interface de programmation standard pour le HTML. Il définit :</p>
+                    <button id="showNext" class="btn btn-success clicOne" >Cliquez ici !</button>
+                    <ul id="list"></ul>
+                </div>
+                </section>
+         
+            <!------------------------------------>
+            <section class="container-fluid py-3" id="domDocument">
+                <div class="container todoList">
+                    <h3>DOM document</h3>
+                    <p>Ajouter vos informations</p>
+                    <input type="text" id="nameInput" placeholder="Nom">
+                    <input type="text" id="surnameInput" placeholder="Prénom">
+                    <input type="number" id="ageInput" placeholder="Âge">
+                    <button id="addBtn" class="btn btn-success mt-3">Ajouter</button>
+                    <div id="infoList"></div>
+                </div>
+                </section>
+                  <!---------------------------------->
+            <section class="container-fluid py-3" id="domElements">
+                <div class="container">
+                    <h3>DOM Elements</h3>
+                  <input type="text" id="metierDesire" placeholder="Entrer votre métier ciblé">
+                  <button class="btn btn-success mt-3" onclick="afficherMetier()" >Cliquez ici !</button>
+                  <div class="output" id="work"></div>
+                </div>
+            </section>              
+                   <!------------------------------------>
+
+                   <section class="container-fluid py-3" id="domHtml">
+                    <div class="container">
+                        <h3>DOM HTML</h3>
+                        <div id="demoText" class="mb-3">Bonjour 10000 codeurs !</div>
+                        <!-- Boutons pour manipuler le DOM -->
+                        <button class="btn btn-info" onclick="changeText()">Changer le texte</button>
+                        <button class="btn btn-warning" onclick="addElement()">Ajouter un texte</button>
+                        <button class="btn btn-danger" onclick="removeElement()">Supprimer le texte</button>
+                        <div id="outputArea" class="output"></div>
+                    </div>
+                   </section>
+                   <!-------------------------------->
+                   <section class="container-fluid py-3" id="domForms">
+                    <div class="container">
+                        <h3>DOM Forms</h3>
+                        <p>Entrer votre moyenne générale</p>
+                            <input type="number" id="moyenne" placeholder="Entrez une moyenne">
+                            <button class="btn btn-primary my-2" onclick="checkGrade()">Entrer</button>
+                        <p id="result"></p>
+                    </div>
+                   </section>
+                   <!----------------------------------->
+                   <section class="container-fluid py-3" id="domCss">
+                    <div class="container">
+                        <h3>DOM CSS</h3>
+                        <p id="textStyle">"Believe you can and you're halfway there." — Theodore Roosevelt</p>
+                        <button class="btn btn-primary" id="btnStyle" onclick="document.getElementById('textStyle').style.color = 'green'">click here !</button>
+                    </div>
+                   </section>
+                   <!------------------------------>
+                   <section class="container-fluid py-3" id="domAnimation">
+                    <div class="container">
+                      <h3>DOM Animation</h3>  
+                      <div id="box"></div>
+                      <button class="btn btn-primary" id="btnAnim">Démarrer l'animation</button>
+                    </div>
+                   </section>
+
+                  <!----------------------------------> 
+                  <section class="container-fluid py-3" id="domEvents">
+                    <div class="container">
+                        <h3>DOM Events</h3>
+                        <h5>The onchange Attribute</h5>
+                      Enter votre nom : <input type="text" id="fname" onchange="upperCase()">
+                     <p>Le nom se transforme en majuscule</p>
+                     <div class="container boxEvent" onmouseover="mOver(this)" onmouseout="mOut(this)" onmouseup="mUp(this)">
+                        Au revoir !
+                      </div>
+                    </div>
+                  </section>
+                  <!------------------------------->
+                  <section class="container-fluid py-3" id="domEventListener">
+                    <div class="container">
+                        <h3>DOM Event Listener</h3>
+                        <button class="btn btn-dark mb-2" id="myBtn">Click Me !</button>
+                        <p id="comment"></p>
+                    </div>
+                  </section>
+                <!--------------------------------------->
+                  <section class="container-fluid py-3" id="domNavigation">
+                    <div class="container">
+                       <h3>Dom Navigation</h3>
+                       <h5 id="first-paragraph">Warda Boubaker</h5>
+                       <p id="second-paragraph">Tunisienne</p>
+                       <p id="third-paragraph">Développeuse Web FullStack</p>
+                       <button class="btn btn-info mb-2" id="navigate-btn">Press here !</button>
+                       <div id="navput"></div>
+                    </div>
+                  </section>
+                <!--------------------------------------->
+                  <section class="container-fluid py-3" id="domNodes">
+                    <div class="container">
+                     <h3>DOM Nodes</h3>
+                     <p id="para1"></p>
+                     <p id="para2"></p>
+                     <button class="btn btn-danger my-2" onclick="deleteFun()">supprimer</button>
+                    </div>
+                  </section>
+                   <!--------------------------------------->
+                   <section class="container-fluid py-3" id="domCollections">
+                  <div class="container">
+                    <h3>DOM Collections</h3>
+                 <ul>
+                  <li class="list">Ali</li>
+                  <li class="list">Meriem</li>
+                  <li class="list">Mehdi</li>
+                 </ul>
+                 <p id="listName"></p>
+                 <button  class="btn btn-info my-2" onclick="colorList()">Click here !</button>
+                  </div>
+                   </section>
+                   <section class="container-fluid py-3" id="domNodeLists">
+                    <div class="container">
+                      <h3>DOM Node Lists</h3>
+                      <ul>
+                        <li class="list-item">Data Science</li>
+                        <li class="list-item">Cyber Secutity</li>
+                        <li class="list-item">Management</li>
+                       </ul>
+                       <button class="btn btn-info" onclick="convertToUppercase()">Click here !</button>
+                    </div>
+                   </section>
+         <footer id="demoFooter">
+            <p>&copy; 2024 Warda Bk. Tous droits réservés.</p>
+         </footer>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    
+  </body>
+</html> 
+  
+
